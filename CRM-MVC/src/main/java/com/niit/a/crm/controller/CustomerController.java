@@ -9,14 +9,13 @@ import com.niit.a.crm.model.Customer;
 
 @Controller
 @RequestMapping("/customer")
-public class MainController {
+public class CustomerController {
 	
-	
-
 	@GetMapping("/showForm")
 	public String showFormForAdd(ModelMap theModel) {
 		Customer theCustomer = new Customer();
 		theModel.addAttribute("customer", theCustomer);
+		System.out.println("Hello WORLD");
 		return "customer-form";
 	}
 }

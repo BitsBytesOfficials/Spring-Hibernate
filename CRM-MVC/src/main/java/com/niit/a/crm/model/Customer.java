@@ -56,10 +56,7 @@ public class Customer {
 		this.email = email;
 	}
 
-	public Customer() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+
 	
 	public String toString() {
 		return "Id:-"+id+"\t firstName:-"+firstName+"\t email:-"+email;
