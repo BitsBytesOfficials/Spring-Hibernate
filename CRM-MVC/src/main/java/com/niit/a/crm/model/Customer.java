@@ -1,5 +1,8 @@
 package com.niit.a.crm.model;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,6 +32,13 @@ public class Customer {
 	}
 
 	public void setPassword(String password) {
+		Base64.Encoder encoder= Base64.getEncoder();
+		String normalString=password;
+		String encodedString =encoder.encodeToString(
+				normalString.getBytes(StandardCharsets.UTF_8)
+				);
+		this.password=encodedString;
+		
 		this.password = password;
 	}
 
