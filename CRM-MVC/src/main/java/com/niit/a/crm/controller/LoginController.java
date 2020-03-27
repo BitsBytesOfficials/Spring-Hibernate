@@ -25,13 +25,14 @@ public class LoginController {
 		
 		
 		User theUser=new User();
+		System.out.println("hello Check User run123");
 		theModel.addAttribute("user",theUser);
 		return "login-customer";
 	}
 	
 	@RequestMapping(value="/loginUser",method= {RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView processLogin(@ModelAttribute User theUser) {
-		
+		System.out.println("hello Check User run");
 		User usr=userService.checkUser(theUser);
 		
 		ModelAndView model=null;

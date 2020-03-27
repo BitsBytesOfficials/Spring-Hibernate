@@ -41,8 +41,6 @@
         <property name="maxIdleTime" value="30000" />
 	</bean>  
 	
-    
-    
     <!-- Step 2: Setup Hibernate session factory -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
@@ -50,7 +48,7 @@
 		<property name="packagesToScan" value="com.niit.a.crm.model" />
 		<property name="hibernateProperties">
 		   <props>
-		      <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+		      <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 		      <prop key="hibernate.show_sql">true</prop>
 		   </props>
 		</property>

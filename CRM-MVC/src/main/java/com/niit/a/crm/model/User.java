@@ -16,6 +16,12 @@ public class User {
 
 	@Column(name="email")
 	String email;
+	@Column(name="password")
+	String password;
+	@Id
+	@Column(name="id")
+	int id;
+	
 
 	public String getEmail() {
 		return email;
@@ -42,9 +48,5 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-	@Column(name="password")
-	String password;
-	@Id
-	@Column(name="id")
-	int id;
+
 }
